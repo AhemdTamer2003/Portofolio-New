@@ -28,6 +28,20 @@ const NavbarLinks = () => {
           </li>
         );
       })}
+
+      {/* ✅ Download CV button */}
+      <li className="group">
+  <a
+    href="https://drive.google.com/uc?export=download&id=1zaltYi7DkGJKsIStduLDC5ku8chjNG7B"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="cursor-pointer text-white hover:text-pinkAccent transition-all duration-500"
+  >
+    Download CV
+  </a>
+  <div className="mx-auto bg-cyan w-0 group-hover:w-full h-[1px] transition-all duration-500"></div>
+</li>
+
     </ul>
   );
 };

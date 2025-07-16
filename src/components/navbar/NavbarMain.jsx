@@ -8,20 +8,23 @@ const NavbarMain = () => {
   const menuOpen = useSelector((state) => state.menu.menuOpen);
 
   return (
-    <nav className="max-w-[1300px] mx-auto w-full px-4 fixed left-1/2 -translate-x-1/2 z-20 mt-2">
-      <div className="flex justify-between items-center w-full bg-black p-6 rounded-full border-[0.5px] border-pinkAccent text-pinkAccent shadow-md">
+    <nav className="fixed top-0 left-0 w-full z-50 backdrop-blur-md bg-black/80 shadow-md border-b border-pinkAccent">
+      <div className="max-w-[1300px] mx-auto px-4 py-3 flex justify-between items-center">
         <NavbarLogo />
 
-        {/* الروابط تظهر حسب حالة الـ Redux */}
-        <div className={`${menuOpen ? "sm:block" : "sm:hidden"} lg:block`}>
+        {/* زر التوغلر يظهر فقط في الشاشات الصغيرة */}
+        <div className="lg:hidden">
+          <NavbarToggler />
+        </div>
+
+        {/* الروابط تظهر حسب حالة Redux */}
+        <div className={`absolute sm:top-[100%] left-1/2 sm:-translate-x-1/2 w-full sm:w-[90%] lg:static lg:translate-x-0 transition-all duration-300 ease-in-out ${menuOpen ? "block" : "hidden"} lg:block`}>
           <NavbarLinks />
         </div>
 
-        <NavbarBtn />
-
-        {/* الزر الخاص بالتوغلر بيظهر فقط على الموبايل */}
-        <div className="lg:hidden sm:block">
-          <NavbarToggler />
+        {/* زر Call to Action */}
+        <div className="hidden lg:block">
+          <NavbarBtn />
         </div>
       </div>
     </nav>

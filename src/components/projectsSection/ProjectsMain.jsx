@@ -6,7 +6,7 @@ import { fadeIn } from "../../framerMotion/variants";
 const projects = [
   {
     name: "Lafiminite",
-    year: "2024",
+    year: "2025",
     align: "right",
     image: "/images/website-img-1.jpg",
     link: "https://lafeminite1.com/ar",
@@ -15,7 +15,7 @@ const projects = [
     name: "MayElward",
     year: "2025",
     align: "left",
-    image: "/images/website-img-2.webp",
+    image: "/images/website-img-2.png",
     link: "#",
   },
   {
